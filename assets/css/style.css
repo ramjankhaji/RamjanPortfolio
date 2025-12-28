@@ -1178,3 +1178,101 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
+
+.resume-item {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid #18d26e;
+  margin-bottom: 25px;
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  background: #18d26e;
+  border-radius: 50%;
+}
+
+.resume-item ul {
+  padding-left: 18px;
+}
+
+.resume-item ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.resume-title {
+  font-size: 22px;
+  margin-top: 40px;
+  font-weight: 700;
+}
+
+.resume-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .resume .col-lg-6 {
+    margin-bottom: 30px;
+  }
+}
+
+/* Toggle Switch */
+.projects-toggle {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+}
+
+.projects-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.projects-toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.projects-toggle .slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.projects-toggle input:checked + .slider {
+  background-color: #18d26e;
+}
+
+.projects-toggle input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* Toggle text */
+.toggle-text {
+  font-weight: 600;
+  color: #18d26e;
+  cursor: pointer;
+}
+

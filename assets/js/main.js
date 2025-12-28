@@ -168,4 +168,21 @@
     items: 1
   });
 
+  /* =========================
+   Projects Toggle Logic
+========================= */
+
+$(document).ready(function () {
+  $('#projectsToggle').on('change', function () {
+    if (this.checked) {
+      $('#projectsContainer').removeClass('d-none');
+      $('#projectsToggleText').text('Hide Projects');
+    } else {
+      $('#projectsContainer').addClass('d-none');
+      $('#projectsToggleText').text('Show Projects');
+    }
+  });
+});
+
+
 })(jQuery);
